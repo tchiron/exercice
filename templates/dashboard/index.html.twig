@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+    <div>
+        <nav>
+            <ul>
+                <li><a href="{{ path('app_user_index') }}">Users list</a></li>
+                <li><a href="{{ path('app_vehicule_index') }}">Vehicles list</a></li>
+                <li><a href="{{ path('app_kilometrage_new') }}">Add bill</a></li>
+            </ul>
+        </nav>
+        <div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kilometrage{% endblock %}
+
+{% block body %}
+    <h1>Kilometrage</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ kilometrage.id }}</td>
+            </tr>
+            <tr>
+                <th>Compteur</th>
+                <td>{{ kilometrage.compteur }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ kilometrage.createdAt ? kilometrage.createdAt|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_kilometrage_index') }}">back to list</a>
+
+    <a href="{{ path('app_kilometrage_edit', {'id': kilometrage.id}) }}">edit</a>
+
+    {{ include('kilometrage/_delete_form.html.twig') }}
+{% endblock %}

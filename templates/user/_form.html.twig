@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {{ form_label(form.nom, 'Nom') }}
+    {{ form_widget(form.nom) }}
+    {{ form_label(form.prenom, 'Prénom') }}
+    {{ form_widget(form.prenom) }}
+    {{ form_label(form.vehicules, 'Véhicules') }}
+    {{ form_widget(form.vehicules) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
